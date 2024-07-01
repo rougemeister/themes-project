@@ -18,25 +18,33 @@ fontSizes.forEach(size =>{
 
     size.addEventListener('click', ()=>{
         if(size.classList.contains('font-size-1')){
+            
+
+        
             fontSize = '10px'
             root.style.setProperty('----sticky-top-left', "5.4rem")
             root.style.setProperty('----sticky-top-rigth', "5.4rem")
+
         }else if(size.classList.contains('font-size-2')){
             fontSize = '13px'
             root.style.setProperty('----sticky-top-left', "5.4rem")
             root.style.setProperty('----sticky-top-rigth', "-7rem")
+            size.classList.add('active')
         }else if(size.classList.contains('font-size-3')){
             fontSize = '16px'
             root.style.setProperty('----sticky-top-left', "-2rem")
             root.style.setProperty('----sticky-top-rigth', "-17rem")
+            size.classList.add('active')
         }else if(size.classList.contains('font-size-4')){
             fontSize = '19px'
             root.style.setProperty('----sticky-top-left', "-5.4rem")
             root.style.setProperty('----sticky-top-rigth', "-25rem")
+            size.classList.add('active')
         }else if(size.classList.contains('font-size-5')){
             fontSize = '22px'
             root.style.setProperty('----sticky-top-left', "-12rem")
             root.style.setProperty('----sticky-top-rigth', "-35rem")
+            size.classList.add('active')
         }
     
         document.querySelector('html').style.fontSize = fontSize
@@ -72,6 +80,8 @@ colorPalette.forEach(color => {
         let primaryHue;
         if(color.classList.contains('color-1')){
             primaryHue = 252;
+            color.classList.add('active')
+         
         }else if(color.classList.contains('color-2')){
             primaryHue = 52;
         }else  if(color.classList.contains('color-3')){
