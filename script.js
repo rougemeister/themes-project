@@ -4,6 +4,9 @@
 const theme = document.getElementById('theme')
 const themeModal = document.querySelector('.customize-theme')
 let root = document.querySelector(':root')
+const BG1 = document.querySelector('.bg-1')
+const BG2 = document.querySelector('.bg-2')
+const BG3 = document.querySelector('.bg-3')
 
 
 //Font sizes 
@@ -81,4 +84,60 @@ colorPalette.forEach(color => {
 
         root.style.setProperty('--primary-color-hue', primaryHue)
     })
+})
+
+
+//Change background
+
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+
+const changeBG = () => {
+    root.style.setProperty('--light-color-lightness', lightColorLightness)
+    root.style.setProperty('--white-color-lightness', whiteColorLightness)
+    root.style.setProperty('--dark-color-lightness', darkColorLightness)
+}
+
+
+BG1.addEventListener('click', ()=>{
+    
+    darkColorLightness = '17%';
+    whiteColorLightness = '100%';
+    lightColorLightness = '95%';
+
+
+    BG1.classList.add('active')
+    BG2.classList.remove('active')
+    BG3.classList.remove("active")
+    changeBG();
+})
+
+BG2.addEventListener('click', ()=>{
+    darkColorLightness = '95%';
+    whiteColorLightness = '25%';
+    lightColorLightness = '15%';
+
+
+    BG2.classList.add('active')
+    BG1.classList.remove('active')
+    BG3.classList.remove("active")
+
+    changeBG()
+})
+
+
+
+BG3.addEventListener('click', ()=>{
+    darkColorLightness = '95%';
+    whiteColorLightness = '10%';
+    lightColorLightness = '0%';
+
+
+    BG3.classList.add('active')
+    BG1.classList.remove('active')
+    BG2.classList.remove("active")
+
+    changeBG()
 })
