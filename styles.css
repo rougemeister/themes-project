@@ -109,7 +109,7 @@ nav .container {
     justify-content: space-between;
 }
 
-nav .search-bar {
+.search-bar {
     background: var(--color-light);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
@@ -117,7 +117,7 @@ nav .search-bar {
 }
 
 
-nav .search-bar input[type="search"] {
+.search-bar input[type="search"] {
     background: transparent;
     width: 30vw;
     margin-left: 1rem;
@@ -609,6 +609,93 @@ main .container .left .profile {
     margin-left: 0.5rem;
 }
 
+
+
+/* RIGHT */
+
+main .container .right {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+
+.right .messages {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.right .messages .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages i {
+    font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid var(--color-light);
+    padding-bottom: 0.5rem;
+}
+.right .messages .category .active {
+    border-color: var(--color-dark);
+}
+
+.right .messages .message {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.right .messages .message:last-child {
+    margin: 0;
+}
+
+.right .messages .message p {
+    font-size: 0.8rem;
+}
+
+/* FRIEND REQUEST */
+.right .friend-requests {
+    margin-top: 1rem;
+}
+
+.right .friend-requests h4 {
+    color: var(--color-gray);
+    margin: 1rem 0;
+}
+
+
+.right .request {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    border-bottom: 0.7rem;
+}
+
+.right .request .info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
 /* Media queries  */
 @media screen and (max-width: 1200px){
     .container {
